@@ -7,7 +7,6 @@
 """
 
 x0, x1 = 0, 1 
-next = 0
 for i in range(51):
     if(i == 0 or i == 1):
         print(i)
