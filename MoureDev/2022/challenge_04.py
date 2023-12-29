@@ -22,7 +22,7 @@ class Polygon(ABC):
 
 class Square(Polygon):
     def __init__(self, base : float, height : float):
-        super.__init__(base, height)
+        super().__init__(base, height)
 
     def area(self) -> float:
         return self.base * self.base
@@ -46,7 +46,7 @@ def getArea(polygon : Polygon) -> float:
 
 triangle : Polygon = Triangle(10, 5)
 rectangle : Polygon = Rectangle(2, 8)
-square : Polygon = Square(3, 6)
+square : Polygon = Square(3, 3)
 
 print(getArea(triangle))
 print(getArea(rectangle))
