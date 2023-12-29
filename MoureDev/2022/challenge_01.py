@@ -9,19 +9,9 @@
 """
 
 def is_anagram(w1: str, w2: str) -> bool:
-    w1_lowcase = w1.lower()
-    w2_lowcase = w2.lower()
-    if w1_lowcase == w2_lowcase:
+    if w1.lower() == w2.lower():
         return False
-    letters_w1 = count_letters(w1_lowcase)
-    letters_w2 = count_letters(w2_lowcase)
-    return letters_w1 == letters_w2
-
-def count_letters(word : str) -> dict[str, int]:
-    letters = dict.fromkeys(word, 0)
-    for letter in letters.keys():
-        letters[letter] = word.count(letter)
-    return letters
+    return sorted(w1.lower()) == sorted(w2.lower())
 
 print(is_anagram("Hola", "Hola"))
 print(is_anagram("Anal", "Lana"))
